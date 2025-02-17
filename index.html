@@ -15,7 +15,7 @@
             text-align: center;
             background: url('fundo.jpg') no-repeat center center fixed; /* Caminho corrigido */
             background-size: cover;
-            color: white;
+            color: rgb(249, 249, 249);
         }
         h1 {
             margin-top: 20px;
@@ -80,6 +80,7 @@
 <!------------------------------------------------------------------- Título ------------------------------------------------------------------->
 <body>
     <div class="advogado-info">
+        <img src="logo - preto.png" class="logo" alt="Logo">
         <h1 class="titulo-advogado">Advogado de</h1>
         <h1 class="titulo-advogado2">Imigração</h1>        
         <h1 class="frase">Emissão de documentos, auxiliando você em cada etapa do processo com segurança e eficiência.</h1>
@@ -90,9 +91,17 @@
     .advogado-info {
         text-align: left; /* Alinha o texto à esquerda */
         color: black; /* Define a cor do texto como preta */
-        padding-left: 200px; /* Move o texto 200px para a direita */
-        /*background-color: rgba(255, 255, 255, 0.5); /* Fundo branco com 50% de transparência */
+        padding-left: 20px; /* Define o espaçamento de 20px da margem esquerda */
         height: 400px; /* Define a altura do fundo */
+    }
+
+    .logo {
+        position: absolute; /* Faz com que a imagem flutue sobre a página */
+        left: 50%; /* Centraliza a imagem horizontalmente */
+        transform: translateX(-50%); /* Ajusta para que o logo fique exatamente no centro */
+        max-width: 450px; /* Limita o tamanho do logo */
+        top: 50px; /* Ajusta a posição do logo para cima */
+        margin-bottom: 20px; /* Diminui o espaço abaixo do logo */
     }
 
     .titulo-advogado {
@@ -100,19 +109,22 @@
         font-weight: bold; /* Deixa o título em negrito */
         margin-top: 200px; /* Move o título 200px para baixo */
         display: block;
+        padding-left: 150px; /* Garante que o título tenha 20px de distância da margem esquerda */
     }
 
     .titulo-advogado2 {
         font-size: 60px; /* Mesmo tamanho do título anterior */
         font-weight: bold; /* Negrito */
-        margin-top: 2px; /* Adiciona o espaço de 10px entre os títulos */
+        margin-top: 2px; /* Adiciona o espaço de 2px entre os títulos */
         display: block;
+        padding-left: 150px; /* Garante que o segundo título tenha 20px de distância da margem esquerda */
     }
 
     .frase {
         font-size: 20px; /* Define o tamanho da fonte da frase */
         font-weight: normal; /* Mantém o nome em estilo normal */
         margin-top: 60px; /* Dá um espaçamento entre a frase e o título */
+        padding-left: 150px; /* Garante que a frase tenha 20px de distância da margem esquerda */
     }
 </style>
 
@@ -252,7 +264,7 @@
 
 <style>
     .equipe-container {
-        background-color: rgba(255, 255, 255, 1); /* Fundo branco */
+        background-color: rgb(244, 235, 235); /* Fundo branco */
         padding: 80px; /* Mais espaçamento */
         border-radius: 10px;
         position: relative; /* Para permitir a posição do título */
@@ -268,7 +280,7 @@
         font-weight: bold;
         color: black; /* Cor do texto */
         padding: 60px 0; /* Mais espaçamento em torno do texto */
-        background-color: rgba(255, 255, 255, 1); /* Fundo branco */
+        background-color: rgba(244, 235, 235); /* Fundo branco */
         width: 100%; /* A largura ocupa toda a área */
         text-align: center;
     }
