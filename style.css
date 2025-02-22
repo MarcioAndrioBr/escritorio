@@ -77,13 +77,18 @@ body {
 }
 
 /*------------------------------------------------------------------------- para a tela no head -------------------------------------------------------------------------*/
-#advocaciaeu {
-    scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
+#conteudo-principal {
+  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
 
-#advocaciabr {
-    scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
+#servico-container {
+  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
+
+#equipe-container {
+  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
+}
+
 /*------------------------------------------------------------------------- conteudo -------------------------------------------------------------------------*/
 .conteudo1 { /* acrescentei o número 1 para desabilitar*/
   margin-bottom: 20px; /* padrão era 48*/
