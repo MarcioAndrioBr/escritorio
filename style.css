@@ -12,43 +12,50 @@ body {
     /* Define o fundo com a imagem */
     background: 
         linear-gradient(rgba(13, 5, 79, 0.25), rgba(222, 6, 42, 0.25)), /* Gradiente com transparência */
-        url('https://marcioandriobr.github.io/escritorio/img/fundo.jpg') no-repeat center center fixed; /* Imagem de fundo */
+        url('/img/fundo.jpg') no-repeat center center fixed; /* Imagem de fundo */
 
     background-size: cover; /* Redimensiona a imagem para cobrir a tela */
 }
 
-@media (max-width: 768px) {  /* Ajustes para telas menores */
-    .lembretes {
-        width: 90%; /* Ocupa mais espaço na tela menor */
-        bottom: 10px; /* Ajusta a posição */
-        right: 10px;
-    }
+/*-------------------------------------------------------------------------Scroll-------------------------------------------------------------------------*/
+#home {
+  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
+}
 
-    .cabecalho {
-        flex-direction: column; /* Empilha os itens do cabeçalho */
-        padding: 5px;
-    }
+#sobre{
+  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
+}
 
-    .cabecalho-menu-item {
-        font-size: 18px; /* Reduz o tamanho da fonte para caber melhor */
-    }
+#servico {
+  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
+}
+
+#equipe {
+  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
 
 /*------------------------------------------------------------------------- cabeçalho -------------------------------------------------------------------------*/
 .cabecalho {
-  display: flex; /*para chamar o flex box*/
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 10px; /*distância do topo da página*/
+  padding: 10px;
   position: sticky;
   top: 0;
-  background-color: rgba(250, 247, 247, 0.1);
+  background-color: transparent; /* Começa transparente */
   z-index: 1000;
   padding: 10px 20px;
-  box-shadow: 0px 4px 6px rgba(10, 10, 10, 0.1);
+  box-shadow: none; /* Sem sombra no início */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Quando rolar a página, aplicamos essa classe */
+.cabecalho.solid {
+  background-color: rgba(236, 229, 229, 0.9); /* Cor sólida ao rolar */
+  /*background-color: rgba(10, 10, 10); /* Cor sólida ao rolar */
+  box-shadow: 0px 4px 6px rgba(10, 10, 10, 0.3); /* Adiciona sombra */
+}
 
 .cabecalho-imagem { /*tamamanho da imagem estava em 72*/
   height: 72px; /*tamanho normal 72*/
@@ -69,40 +76,15 @@ body {
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Sombra branca suave */
 }
 
-.cabecalho-menu-item1 {
-  font-family: 'Sarala', sans-serif;
-  color: #0b0b0b;
-  font-weight: 400;
-  font-size: 24px
-}
-
-/*------------------------------------------------------------------------- para a tela no head -------------------------------------------------------------------------*/
-#conteudo-principal {
-  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
-}
-
-#servico-container {
-  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
-}
-
-#equipe-container {
-  scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
-}
-
-/*------------------------------------------------------------------------- conteudo -------------------------------------------------------------------------*/
-.conteudo1 { /* acrescentei o número 1 para desabilitar*/
-  margin-bottom: 20px; /* padrão era 48*/
-  border-top: 0.9px solid #0b0b0b;
-}
-
-.conteudo-principal {
+/*-------------------------------------------------------------------------home-------------------------------------------------------------------------*/
+.home {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 
-.conteudo-principal-escrito {
+.home-escrito {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -110,21 +92,21 @@ body {
 
 }
 
-.conteudo-principal-escrito-titulo {
+.home-escrito-titulo {
   font-family: 'Righteous', cursive;
   font-weight: 400;
   font-size: 64px;
   color: #060606;
 }
 
-.conteudo-principal-escrito-subtitulo {
+.home-escrito-subtitulo {
   font-family: 'Sarala', sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #0f0e0e;
 }
 
-.conteudo-principal-escrito-botao {
+.home-escrito-botao {
   background-color: #ECD6C4;
   width: 180px;
   height: 60px;
@@ -137,50 +119,66 @@ body {
   color: #2F2325;
 }
 
-.conteudo-principal-escrito-botao:hover {
+.home-escrito-botao:hover {
   background-color: rgba(236, 214, 196, 0.53);
 }
 
-.conteudo-principal-imagem {
+.home-imagem {
   height: 200px; /*valor original 430*/
 }
 
-.conteudo-secundario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  margin-top: 48px;
+/*-----------------------------------------------------Sobre-----------------------------------------------------*/
+.sobre {
+  display: flex; 
+  align-items: center; /* Alinha os elementos verticalmente */
+  justify-content: space-evenly; /* Distribui os elementos uniformemente */
+  gap: 50px; /* Espaço entre o texto e a imagem */
+  /*padding: 20px; /* Adiciona um espaçamento para não grudar nas bordas */
+  flex-direction: row;
+  margin-top: 200px; /*espaço entre a linha a o título*/
+  padding: 50px; /* mais espaçamento em cima */
+  border-radius: 10px;
+  position: relative; /* Para permitir a posição do texto dentro do fundo */
+  background-color: rgb(215, 209, 209); /* fundo branco */    
 }
 
-.conteudo-secundario-titulo {
-  border-top: 0.4px solid #FFF2E7;
-  padding-top: 48px;
-  font-family: 'Righteous', cursive;
-  font-weight: 400;
-  font-size: 24px;
-  color: #FFF2EF;
-  margin-bottom: 16px;
+.texto-sobre {
+  text-align: left; /* Alinha todo o texto à esquerda */
+  /*max-width: 50%; /* Define um tamanho máximo para aproximar do centro */
 }
 
-.conteudo-secundario-paragrafo {
-  font-family: 'Sarala', sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  color: #ECD6C4;
+.imgagem-sobre img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+  height: auto; /* Mantém a proporção original */
+  width: 800px; /* Ajuste o tamanho conforme necessário */
 }
 
-/*------------------------------------------------------------------------- rodape -------------------------------------------------------------------------*/
-.rodape {
-    padding: 32px;
-    border-top: 0.4px solid #FFF2E7;
+.texto-sobre-titulo {
+  font-size: 64px; /* Título maior */
+  font-weight: bold; /* Deixa o título em negrito */
+  margin-bottom: 10px; /* Espaçamento entre o título e o subtítulo */
+}
+
+.caixa-texto {
+  padding: 0px; /* Espaçamento interno da caixa */
+  margin: 0px; /* Espaçamento externo da caixa */
+  max-width: 600px; /* Limita a largura máxima (ajuste conforme necessário) */
+
+}
+
+.texto-sobre-subtitulo {
+  font-size: 18px; /* Define um tamanho menor para o subtítulo */
+  font-weight: 400; /* Mantém uma espessura normal */
+  margin-bottom: 15px; /* Espaçamento entre os parágrafos */
 }
 
 
-/*------------------------------------------------------------------------- as minhas -------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------Títulos-------------------------------------------------------------------------*/
 
 .titulo { /*título das divisões*/
     display: flex;
+    font-size: 43px; /* Título maior */
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -189,12 +187,12 @@ body {
   }
 
 /*-------------------------------------------------------------------------serviço-------------------------------------------------------------------------*/
-.servico-container {
+.servico {
     display: flex;
     flex-direction: column; /* coluna do serviço e os icones */
     align-items: center; /* alinha os serviços*/
     gap: 20px; /**/
-    margin-top: 200px; /*espaço entre a linha a o título*/
+    /*margin-top: 200px; /*espaço entre a linha a o título*/
     padding: 50px; /* mais espaçamento em cima*/
     border-radius: 10px;
     position: relative; /* Para permitir a posição do texto dentro do fundo */
@@ -220,8 +218,15 @@ body {
     margin-bottom: 10px;
 }
 
-.nome-servico {
-    font-size: 18px;
+.imagem-servico img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+  height: auto; /* Mantém a proporção original */
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+}
+
+
+.titulo-servico {
+    font-size: 24px;
     font-family: 'Sarala', sans-serif; /**/
     /*font-weight: 400;/**/
     font-weight: bold;
@@ -231,22 +236,34 @@ body {
 }
 
 .texto-servico {
-    font-size: 14px;
+    font-size: 18px;
     color: black; /* Cor preta para o texto */
     display: block;
 }
 
+.caixa-texto-servico {
+  padding: 0px; /* Espaçamento interno da caixa */
+  margin: 0px; /* Espaçamento externo da caixa */
+  max-width: 300px; /* Limita a largura máxima (ajuste conforme necessário) */
+}
+
+.caixa-titulo-servico {
+  padding: 0px; /* Espaçamento interno da caixa */
+  margin: 0px; /* Espaçamento externo da caixa */
+  max-width: 330px; /* Limita a largura máxima (ajuste conforme necessário) */
+}
+
 /*-------------------------------------------------------------------------Equipe-------------------------------------------------------------------------*/
-.equipe-container {
+.equipe {
     display: flex;
-    flex-direction: column; /* coluna do serviço e os icones */
-    align-items: center; /* alinha os serviços*/
-    gap: 20px; /**/
-    /*margin-top: 200px; /*espaço entre a linha a o título*/
-    padding: 50px; /* mais espaçamento em cima */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
     border-radius: 10px;
-    position: relative; /* Para permitir a posição do texto dentro do fundo */
-    background-color: rgb(215, 209, 209); /* fundo branco */    
+    position: relative;
+    background-color: rgb(215, 209, 209);
+    margin-top: -20px; /* Ajuste negativo para aproximar */
 }
 
 .equipe-menu{
@@ -278,30 +295,64 @@ body {
     display: block;
 }
 
-.texto-equipe {
-    font-size: 14px;
-    color: black; /* Cor preta para o texto */
-    display: block;
+.imagem-equipe img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+  height: auto; /* Mantém a proporção original */
+  width: 300px; /* Ajuste o tamanho conforme necessário */
 }
+
+.nome-colaborador {
+  font-size: 24px;
+  font-family: 'Sarala', sans-serif; /**/
+  /*font-weight: 400;/**/
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black; /* Cor preta para o nome */
+  display: block;
+}
+
+.funcao-colaborador {
+  font-size: 18px;
+  font-family: 'Sarala', sans-serif; /**/
+  /*font-weight: 400;/**/
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black; /* Cor preta para o nome */
+  display: block;
+}
+
+.caixa-texto-equipe {
+  padding: 0px; /* Espaçamento interno da caixa */
+  margin: 0px; /* Espaçamento externo da caixa */
+  max-width: 400px; /* Limita a largura máxima (ajuste conforme necessário) */
+}
+
+.texto-equipe {
+  font-size: 18px;
+  color: black; /* Cor preta para o texto */
+  display: block;
+}
+
+/*------------------------------------------------------------------------- rodape -------------------------------------------------------------------------*/
+.rodape {
+  /*padding: 32px;
+  border-top: 0.4px solid #FFF2E7;
+}
+
 
 
 html {
     scroll-behavior: smooth;
 }
 
-
 /*-------------------------------------------------------------------------rodapé-------------------------------------------------------------------------*/
-.category {
-   margin-bottom: 50px;
-}
-
 .titulo-rodape-texto {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
     margin-top: 5px; /*espaço entre a linha a o título*/
-    color: rgb(245, 238, 238);
+    color: rgb(13, 12, 12);
   }
 
 .telemovel {
@@ -309,53 +360,5 @@ html {
     align-items: center;
     margin-bottom: 10px;
     margin-left: 500px;
-    color: rgb(245, 238, 238);
+    color: rgb(5, 5, 5);
   }
-
-/*links para os botões*/
-.links-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-/*a {
-    display: inline-block;
-    padding: 12px 25px;
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 30px;
-    background: linear-gradient(145deg, #1e1e1e, #323232);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), -5px -5px 15px rgba(255, 255, 255, 0.1);
-    transition: 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
-}
-a:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    transform: translateX(-100%);
-    transition: 0.3s ease-in-out;
-}
-a:hover {
-    background: linear-gradient(145deg, #323232, #1e1e1e);
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7), -5px -5px 20px rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-a:hover:before {
-    transform: translateX(100%);
-}
-
-
-
-  /**/
