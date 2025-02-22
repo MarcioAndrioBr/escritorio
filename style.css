@@ -12,7 +12,7 @@ body {
     /* Define o fundo com a imagem */
     background: 
         linear-gradient(rgba(13, 5, 79, 0.25), rgba(222, 6, 42, 0.25)), /* Gradiente com transparência */
-        url('/img/fundo.jpg') no-repeat center center fixed; /* Imagem de fundo */
+        url('img/fundo.jpg') no-repeat center center fixed; /* Imagem de fundo */
 
     background-size: cover; /* Redimensiona a imagem para cobrir a tela */
 }
