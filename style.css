@@ -12,7 +12,7 @@ body {
     /* Define o fundo com a imagem */
     background: 
         linear-gradient(rgba(13, 5, 79, 0.25), rgba(222, 6, 42, 0.25)), /* Gradiente com transparência */
-        url('img/fundo.jpg') no-repeat center center fixed; /* Imagem de fundo */
+        url('/img/fundo.jpg') no-repeat center center fixed; /* Imagem de fundo */
 
     background-size: cover; /* Redimensiona a imagem para cobrir a tela */
 }
@@ -358,7 +358,9 @@ html {
 .telemovel {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-left: 500px;
     color: rgb(5, 5, 5);
+    font-size: 24px; /* Ajuste o valor para o tamanho desejado */
+
   }
