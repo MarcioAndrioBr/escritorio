@@ -11,29 +11,24 @@ body {
     font-size: 100%;
     /* Define o fundo com a imagem */
     background: 
-        linear-gradient(rgba(13, 5, 79, 0.25), rgba(222, 6, 42, 0.25)), /* Gradiente com transparência */
-        url('img/fundo.jpg') no-repeat center center fixed; /* Imagem de fundo */
+   /*     linear-gradient(rgba(13, 5, 79, 0.25), rgba(222, 6, 42, 0.25)), /* Gradiente com transparência */
+        url('img/fundo 6.jpg') no-repeat center center fixed; /* Imagem de fundo */
 
     background-size: cover; /* Redimensiona a imagem para cobrir a tela */
 }
-
 /*-------------------------------------------------------------------------Scroll-------------------------------------------------------------------------*/
 #home {
   scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
-
 #sobre{
   scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
-
 #servico {
   scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
-
 #equipe {
   scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
-
 /*------------------------------------------------------------------------- cabeçalho -------------------------------------------------------------------------*/
 .cabecalho {
   display: flex;
@@ -49,25 +44,23 @@ body {
   box-shadow: none; /* Sem sombra no início */
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 /* Quando rolar a página, aplicamos essa classe */
 .cabecalho.solid {
   background-color: rgba(236, 229, 229, 0.9); /* Cor sólida ao rolar */
   /*background-color: rgba(10, 10, 10); /* Cor sólida ao rolar */
   box-shadow: 0px 4px 6px rgba(10, 10, 10, 0.3); /* Adiciona sombra */
 }
-
-.cabecalho-imagem { /*tamamanho da imagem estava em 72*/
-  height: 72px; /*tamanho normal 72*/
+.cabecalho-imagem {
+  height: 72px;
   align-items: center;
+  /*filter: drop-shadow(10px 10px 20px rgba(255, 255, 255, 0.8)); /* Sombra branca suave */
+  filter: drop-shadow(4px 4px 3px rgba(255, 255, 255, 1)); /* Sombra branca suave */
 }
-
 .cabecalho-menu {
   display: flex;
   align-items: center;
   gap: 32px;
 }
-
 .cabecalho-menu-item {
     font-family: 'Sarala', sans-serif;
     color: #0b0b0b;
@@ -75,7 +68,6 @@ body {
     font-size: 24px;
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Sombra branca suave */
 }
-
 /*-------------------------------------------------------------------------home-------------------------------------------------------------------------*/
 .home {
   display: flex;
@@ -83,50 +75,53 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-
 .home-escrito {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 100px; /* Move o título 200px para baixo */
-
 }
-
 .home-escrito-titulo {
-  font-family: 'Righteous', cursive;
+  /*font-family: 'Righteous', cursive; */
   font-weight: 400;
   font-size: 64px;
-  color: #060606;
+  color: #fbf8f8;
+  /*text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Sombra preta suave 0.7 era o padrão*/
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9); /* Sombra preta suave 0.7 era o padrão*/
 }
-
 .home-escrito-subtitulo {
   font-family: 'Sarala', sans-serif;
   font-weight: 400;
   font-size: 20px;
-  color: #0f0e0e;
+  color: #fbf8f8;
+  /*text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Sombra preta suave 0.7 era o padrão*/
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9); /* Sombra preta suave 0.7 era o padrão*/
 }
-
-.home-escrito-botao {
-  background-color: #ECD6C4;
-  width: 180px;
-  height: 60px;
-  border: none;
-  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  font-family: 'Sarala', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  color: #2F2325;
-}
-
-.home-escrito-botao:hover {
-  background-color: rgba(236, 214, 196, 0.53);
-}
-
 .home-imagem {
-  height: 200px; /*valor original 430*/
+  height: 200px; /* valor original 430 */
+  filter: invert(1) drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.9)); /* Inverte a imagem e adiciona sombra preta */
 }
-
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  background-color: #33a85e;
+  color: white;
+  font-size: 20px; /* Diminuído para ajustar o tamanho */
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 12px; /* Reduzi o padding lateral */
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  max-width: 185px; /* Define um limite máximo de largura */
+  justify-content: center;
+}
+.whatsapp-button img {
+  width: 40px; /* Reduzi um pouco o tamanho do ícone */
+  height: 40px;
+  margin-right: 10px;
+}
 /*-----------------------------------------------------Sobre-----------------------------------------------------*/
 .sobre {
   display: flex; 
@@ -141,41 +136,31 @@ body {
   position: relative; /* Para permitir a posição do texto dentro do fundo */
   background-color: rgb(215, 209, 209); /* fundo branco */    
 }
-
 .texto-sobre {
   text-align: left; /* Alinha todo o texto à esquerda */
   /*max-width: 50%; /* Define um tamanho máximo para aproximar do centro */
 }
-
 .imgagem-sobre img {
   max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
   height: auto; /* Mantém a proporção original */
   width: 800px; /* Ajuste o tamanho conforme necessário */
 }
-
 .texto-sobre-titulo {
   font-size: 64px; /* Título maior */
   font-weight: bold; /* Deixa o título em negrito */
   margin-bottom: 10px; /* Espaçamento entre o título e o subtítulo */
 }
-
 .caixa-texto {
   padding: 0px; /* Espaçamento interno da caixa */
   margin: 0px; /* Espaçamento externo da caixa */
   max-width: 600px; /* Limita a largura máxima (ajuste conforme necessário) */
-
 }
-
 .texto-sobre-subtitulo {
   font-size: 18px; /* Define um tamanho menor para o subtítulo */
   font-weight: 400; /* Mantém uma espessura normal */
   margin-bottom: 15px; /* Espaçamento entre os parágrafos */
 }
-
-
-
 /*-------------------------------------------------------------------------Títulos-------------------------------------------------------------------------*/
-
 .titulo { /*título das divisões*/
     display: flex;
     font-size: 43px; /* Título maior */
@@ -185,7 +170,6 @@ body {
     margin-top: 5px; /*espaço entre a linha a o título*/
     color: rgb(11, 11, 11);
   }
-
 /*-------------------------------------------------------------------------serviço-------------------------------------------------------------------------*/
 .servico {
     display: flex;
@@ -198,13 +182,11 @@ body {
     position: relative; /* Para permitir a posição do texto dentro do fundo */
     background-color: rgb(236, 229, 229); /* fundo branco */    
 }
-
 .servico-menu{
     display: flex;
     align-items: center;
     gap: 50px;
 }
-
 .servico {
     display: flex;
     flex-direction: column;
@@ -212,19 +194,15 @@ body {
     margin-bottom: 20px;
     text-align: center; /* Centraliza os textos */
 }
-
 .servico img {
     height: auto;
     margin-bottom: 10px;
 }
-
 .imagem-servico img {
   max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
   height: auto; /* Mantém a proporção original */
   width: 300px; /* Ajuste o tamanho conforme necessário */
 }
-
-
 .titulo-servico {
     font-size: 24px;
     font-family: 'Sarala', sans-serif; /**/
@@ -234,25 +212,21 @@ body {
     color: black; /* Cor preta para o nome */
     display: block;
 }
-
 .texto-servico {
     font-size: 18px;
     color: black; /* Cor preta para o texto */
     display: block;
 }
-
 .caixa-texto-servico {
   padding: 0px; /* Espaçamento interno da caixa */
   margin: 0px; /* Espaçamento externo da caixa */
   max-width: 300px; /* Limita a largura máxima (ajuste conforme necessário) */
 }
-
 .caixa-titulo-servico {
   padding: 0px; /* Espaçamento interno da caixa */
   margin: 0px; /* Espaçamento externo da caixa */
   max-width: 330px; /* Limita a largura máxima (ajuste conforme necessário) */
 }
-
 /*-------------------------------------------------------------------------Equipe-------------------------------------------------------------------------*/
 .equipe {
     display: flex;
@@ -265,13 +239,11 @@ body {
     background-color: rgb(215, 209, 209);
     margin-top: -20px; /* Ajuste negativo para aproximar */
 }
-
 .equipe-menu{
     display: flex;
     align-items: center;
     gap: 50px;
 }
-
 .equipe {
     display: flex;
     flex-direction: column;
@@ -279,12 +251,10 @@ body {
     margin-bottom: 20px;
     text-align: center; /* Centraliza os textos */
 }
-
 .equipe img {
     height: auto;
     margin-bottom: 10px;
 }
-
 .nome-equipe {
     font-size: 18px;
     font-family: 'Sarala', sans-serif; /**/
@@ -294,13 +264,11 @@ body {
     color: black; /* Cor preta para o nome */
     display: block;
 }
-
 .imagem-equipe img {
   max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
   height: auto; /* Mantém a proporção original */
   width: 300px; /* Ajuste o tamanho conforme necessário */
 }
-
 .nome-colaborador {
   font-size: 24px;
   font-family: 'Sarala', sans-serif; /**/
@@ -310,7 +278,6 @@ body {
   color: black; /* Cor preta para o nome */
   display: block;
 }
-
 .funcao-colaborador {
   font-size: 18px;
   font-family: 'Sarala', sans-serif; /**/
@@ -320,47 +287,40 @@ body {
   color: black; /* Cor preta para o nome */
   display: block;
 }
-
 .caixa-texto-equipe {
   padding: 0px; /* Espaçamento interno da caixa */
   margin: 0px; /* Espaçamento externo da caixa */
   max-width: 400px; /* Limita a largura máxima (ajuste conforme necessário) */
 }
-
 .texto-equipe {
   font-size: 18px;
   color: black; /* Cor preta para o texto */
   display: block;
 }
-
 /*------------------------------------------------------------------------- rodape -------------------------------------------------------------------------*/
-.rodape {
-  /*padding: 32px;
-  border-top: 0.4px solid #FFF2E7;
+.icones{
+  width: 20px; margin-right: 10px;
+  filter: invert(1) drop-shadow(4px 4px 2px rgba(0, 0, 0, 1)); /* Inverte a imagem e adiciona sombra preta */
 }
-
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-/*-------------------------------------------------------------------------rodapé-------------------------------------------------------------------------*/
 .titulo-rodape-texto {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
     margin-top: 5px; /*espaço entre a linha a o título*/
-    color: rgb(13, 12, 12);
-  }
+    color: rgb(250, 250, 250);
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 1); /* Sombra preta suave 0.7 era o padrão*/
 
+  }
 .telemovel {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     margin-left: 500px;
-    color: rgb(5, 5, 5);
+    color: rgb(249, 246, 246);
     font-size: 24px; /* Ajuste o valor para o tamanho desejado */
+    /*text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.9); /* Sombra preta suave 0.7 era o padrão*/
+    text-shadow: 4px 4px 2px rgba(1, 1, 1, 1); /* Sombra preta suave 0.7 era o padrão*/
+
 
   }
