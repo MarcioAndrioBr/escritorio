@@ -239,7 +239,7 @@ body {
     background-color: rgb(215, 209, 209);
     margin-top: -20px; /* Ajuste negativo para aproximar */
 }
-.equipe-menu{
+.equipe-menu{ /*foi substituido pelo equipe top alinhando todos as fotos no topo*/
     display: flex;
     align-items: center;
     gap: 50px;
@@ -251,6 +251,14 @@ body {
     margin-bottom: 20px;
     text-align: center; /* Centraliza os textos */
 }
+.equipe-top {
+  display: flex;
+  /flex-direction: column; /**/
+  align-items: flex-start;
+  /*margin-bottom: 20px; /**/
+  /*text-align: center; /* Centraliza os textos */
+}
+
 .equipe img {
     height: auto;
     margin-bottom: 10px;
